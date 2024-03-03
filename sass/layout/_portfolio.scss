@@ -71,6 +71,7 @@
   margin-bottom: 20px;
 }
 .card-item {
+  height: 404px;
   position: relative;
   flex-basis: calc((100% - 60px) / 3);
   outline: 1px solid #eee;
@@ -84,14 +85,12 @@
     transform: translateY(0);
   }
 }
-.overlay {
+.overlay-text {
   position: absolute;
   top: 0;
   left: 0;
-  width: 370px;
-  height: 294px;
   padding: 63px 24px;
-  transform: translateY(140%);
+  transform: translateY(100%);
   color: #fff;
   font-size: 18px;
   font-style: normal;
@@ -100,4 +99,16 @@
   letter-spacing: 0.54px;
   background-color: rgba(33, 150, 243, 0.9);
   transition: transform 0.5s ease;
+}
+.overlay {
+  overflow: hidden;
+  position: relative;
+}
+.card-list-link {
+  &:hover .overlay-text {
+    transform: translateY(0);
+  }
+}
+.card-list-text {
+  padding: 0 24 20 24;
 }

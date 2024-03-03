@@ -1026,6 +1026,7 @@ label {
 }
 
 .card-item {
+  height: 404px;
   position: relative;
   -ms-flex-preferred-size: calc((100% - 60px) / 3);
       flex-basis: calc((100% - 60px) / 3);
@@ -1043,15 +1044,13 @@ label {
           transform: translateY(0);
 }
 
-.overlay {
+.overlay-text {
   position: absolute;
   top: 0;
   left: 0;
-  width: 370px;
-  height: 294px;
   padding: 63px 24px;
-  -webkit-transform: translateY(140%);
-          transform: translateY(140%);
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
   color: #fff;
   font-size: 18px;
   font-style: normal;
@@ -1063,4 +1062,18 @@ label {
   transition: -webkit-transform 0.5s ease;
   transition: transform 0.5s ease;
   transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+.overlay {
+  overflow: hidden;
+  position: relative;
+}
+
+.card-list-link:hover .overlay-text {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.card-list-text {
+  padding: 0 24 20 24;
 }/*# sourceMappingURL=main.css.map */
