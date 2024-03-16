@@ -1,0 +1,11 @@
+{
+  "folders": [
+	{
+		"name": "WebStudio-SASS",
+		"path": "."
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "WebStudio-SASS"
+  }
+}
