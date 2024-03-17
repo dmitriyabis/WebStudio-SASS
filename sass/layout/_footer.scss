@@ -72,6 +72,9 @@
   height: 44px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+  &:hover {
+    background-color: #2196f3;
+  }
 }
 .footer-social-link-svg {
   margin-top: 12px;
@@ -79,9 +82,7 @@
   fill: currentColor;
   color: #fff;
 }
-.footer-social-link:hover {
-  background-color: #2196f3;
-}
+
 .subscribe {
   margin-left: 23px;
 }
