@@ -1,6 +1,8 @@
+@import "./abstracts/mixins";
 @import "./base/_reset";
 @import "./components/_wrap";
 @import "./components/button";
+@import "./components/modal";
 @import "./layout/header";
 @import "./layout/business";
 @import "./layout/features";
@@ -8,5 +10,4 @@
 @import "./layout/team";
 @import "./layout/customers";
 @import "./layout/footer";
-@import "./layout/modal";
 @import "./layout/portfolio";

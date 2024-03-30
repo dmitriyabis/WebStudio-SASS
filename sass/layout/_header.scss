@@ -11,24 +11,44 @@ header {
 .header_flex_container {
   display: flex;
   align-items: center;
+  height: 80px;
+  @include tab(768px) {
+    gap: 87px;
+  }
+
+  @include tab(1200px) {
+    gap: 93px;
+  }
 }
+.header__btn {
+  display: block;
+  margin: 0 auto;
+  background-color: inherit;
+
+  @include tab(768px) {
+    display: none;
+  }
+}
+.nav {
+  display: none;
+  @include tab(768px) {
+    display: block;
+  }
+}
+
 .nav__list {
   display: flex;
-  align-items: center;
-  list-style: none;
+  gap: 50px;
 }
-.nav__list-logo-item {
-  margin-right: 93px;
-}
+
 .header-logo {
-  color: #212121;
-  font-family: Raleway;
+  color: inherit;
+  font-family: "Raleway";
   font-size: 26px;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
-  letter-spacing: 0.78px;
-  margin-top: 24px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  text-align: left;
 }
 span {
   color: #2196f3;
@@ -38,11 +58,6 @@ span {
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.78px;
-}
-.nav__list-item {
-  &:not(:last-child) {
-    margin-right: 50px;
-  }
 }
 .nav__list-link {
   position: relative;
@@ -86,11 +101,21 @@ span {
   align-items: center;
   justify-content: center;
   margin-left: auto;
-  list-style: none;
 }
-.contact__list-item {
-  &:nth-child(1) {
-    margin-right: 50px;
+.contact {
+  display: flex;
+  align-items: start;
+  display: none;
+  @include tab(768px) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: auto;
+  }
+
+  @include desc(1200px) {
+    flex-direction: row;
+    gap: 50px;
   }
 }
 .contact__list-link {
@@ -98,8 +123,6 @@ span {
   align-items: center;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  padding-top: 30px;
-  padding-bottom: 30px;
   text-decoration: none;
   color: #757577;
 
@@ -108,7 +131,15 @@ span {
     color: #2196f3;
     fill: #2196f3;
   }
+  @include tab(768px) {
+    font-size: 12px;
+  }
+
+  @include desc(1200px) {
+    font-size: 14px;
+  }
 }
 .contact__list-icon {
   margin-right: 10px;
+  margin-left: 0;
 }
