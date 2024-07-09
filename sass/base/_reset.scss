@@ -1,36 +1,41 @@
-ul {
-  margin: 0;
-  list-style: none;
-  padding: 0;
-}
-
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-p {
+p,
+button {
   margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 a {
   text-decoration: none;
-  color: inherit;
 }
 
 button {
   border: none;
   cursor: pointer;
-  font-family: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 address {
   font-style: normal;
 }
 
-img {
+label {
   display: block;
-  height: auto;
-  max-width: 100%;
+  margin-bottom: 10px;
 }

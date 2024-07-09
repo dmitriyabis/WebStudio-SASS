@@ -1,0 +1,89 @@
+.team {
+  padding: 60px 0;
+  background-color: $team-white-color;
+
+  @include desc(1200px) {
+    padding: 94px 0;
+  }
+
+  &__title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+}
+
+.staff {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex-wrap: wrap;
+  @include tab(768px) {
+    flex-direction: row;
+  }
+
+  &__item {
+    @include tab(768px) {
+      flex-basis: calc((100% - 30px) / 2);
+    }
+
+    @include desc(1200px) {
+      flex-basis: calc((100% - 90px) / 4);
+    }
+
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+      0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  }
+
+  &__text {
+    padding: 30px 0;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  &__desc {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    text-align: center;
+  }
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 16px;
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: rgba(175, 177, 184, 1);
+    transition: 0.2s;
+
+    &:hover {
+      background-color: rgba(33, 150, 243, 1);
+      color: white;
+    }
+  }
+
+  &__icon {
+    fill: currentColor;
+  }
+}

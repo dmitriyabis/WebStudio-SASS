@@ -1,3 +1,7 @@
+@mixin gridSystem($gapSumm, $rowElements) {
+  flex-basis: calc((100% - $gapSumm) / $rowElements);
+}
+
 @mixin mob($breakPoint) {
   @media screen and (min-width: $breakPoint) {
     @content;
@@ -12,6 +16,21 @@
 
 @mixin desc($breakPoint) {
   @media screen and (min-width: $breakPoint) {
+    @content;
+  }
+}
+
+@mixin bg-image($webp, $fallback, $gradient) {
+  @supports (background-image: url("#{$webp}")) {
+    background-image: $gradient, url("#{$webp}");
+  }
+  background-image: $gradient, url("#{$fallback}");
+}
+
+@mixin retina($dpr, $dpi, $dppx) {
+  @media (min-device-pixel-ratio: $dpr),
+    (min-resolution: $dpi),
+    (min-resolution: $dppx) {
     @content;
   }
 }
